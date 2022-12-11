@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi3</title>
+    <link rel="stylesheet" href="css/multi3.css">
+</head>
+<body>
+    <!-- 3의 배수인지 아닌 지 확인 후 결과를 출력하는 부분 -->
+    <div id="result"></div> 
+    <script>
+        var userNumber = prompt("숫자를 입력하세요.");
+        var displayArea = document.querySelector('#result');
+
+        if(userNumber != null) {
+            // 확인을 눌렀을 때 실행할 명령 작성
+            if (userNumber % 3 === 0) {
+                // 3의 배수일 때 실행할 명령
+                displayArea.innerHTML = userNumber + "은 3의 배수입니다.";
+            }
+            else {
+                displayArea.innerHTML = userNumber + "은 3의 배수가 아닙니다.";
+            }
+        }
+        else {
+            // 취소를 눌렀을 때 실행할 명령 작성
+            alert("입력이 취소되었습니다.");
+        }
+    </script>
+</body>
+</html>
